@@ -1,0 +1,156 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ */
+package Panel;
+
+
+
+import Components.RoundedButton;
+
+import Components.TabbedPaneCustom;
+
+import java.awt.BorderLayout;
+import javax.swing.*;
+import java.awt.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import javax.swing.border.EmptyBorder;
+
+
+/**
+ *
+ * @author brici_6ul2f65
+ */
+public class MateriauxPanel extends JPanel {
+    private TabbedPaneCustom tabbedPane;
+
+    public MateriauxPanel() throws Exception {
+        setBorder(new EmptyBorder(4, 5, 2, 0));
+        
+        // Layout for the main panel (Tabbed Pane)
+        tabbedPane = new TabbedPaneCustom();
+        tabbedPane.setSelectedColor(new Color(49, 158, 242));
+        tabbedPane.setUnselectedColor(new Color(185, 214, 255));
+        
+        // Add tabs without initializing panels
+        tabbedPane.addTab("Profilés",  new ProfilePanel());
+        tabbedPane.addTab("Vitre", null);
+        tabbedPane.addTab("Joints", null);
+        tabbedPane.addTab("Roulettes", null);
+        tabbedPane.addTab("Pammelles", null);
+        tabbedPane.addTab("Serrures", null);
+        tabbedPane.addTab("Poignées", null);
+        tabbedPane.addTab("Vis d'assemblage", null);
+        
+        // Add change listener to load panels lazily
+        tabbedPane.addChangeListener(e -> {
+            int selectedIndex = tabbedPane.getSelectedIndex();
+            if (tabbedPane.getComponentAt(selectedIndex) == null) {
+                switch (selectedIndex) {
+                 
+
+                    case 1 : {
+                        try {
+                            tabbedPane.setComponentAt(selectedIndex, new VitrePanel());
+                        } catch (Exception ex) {
+                            Logger.getLogger(MateriauxPanel.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                    }
+break;
+                         case 2 : {
+                        try {
+                            tabbedPane.setComponentAt(selectedIndex, new JointPanel());
+                        } catch (Exception ex) {
+                            Logger.getLogger(MateriauxPanel.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                    }
+                       break;  
+
+                         case 3 : {
+                        try {
+                            tabbedPane.setComponentAt(selectedIndex, new RoulettePanel());
+                        } catch (Exception ex) {
+                            Logger.getLogger(MateriauxPanel.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                    }
+ break; 
+                         case 4 : {
+                        try {
+                            tabbedPane.setComponentAt(selectedIndex, new PaumellePanel());
+                        } catch (Exception ex) {
+                            Logger.getLogger(MateriauxPanel.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                    }
+ break; 
+                         case 5 : {
+                        try {
+                            tabbedPane.setComponentAt(selectedIndex, new SerrurePanel());
+                        } catch (Exception ex) {
+                            Logger.getLogger(MateriauxPanel.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                    }
+                          break; 
+
+                         case 6 : {
+                        try {
+                            tabbedPane.setComponentAt(selectedIndex, new PoigneePanel());
+                        } catch (Exception ex) {
+                            Logger.getLogger(MateriauxPanel.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                    }
+                          break; 
+
+                         case 7 : {
+                        try {
+                            tabbedPane.setComponentAt(selectedIndex, new VisPanel());
+                            // Add cases for other panels as needed
+                            
+                            // Add cases for other panels as needed
+                        } catch (Exception ex) {
+                            Logger.getLogger(MateriauxPanel.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                    }
+                          break; 
+                }
+            }
+        });
+
+        // Create a main panel to hold the tabbed pane
+        setLayout(new BorderLayout());
+        add(tabbedPane, BorderLayout.CENTER); // Add the tabbed pane to the center
+    }
+
+
+
+
+
+
+
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+    }// </editor-fold>//GEN-END:initComponents
+
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // End of variables declaration//GEN-END:variables
+}
