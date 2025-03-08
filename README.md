@@ -7,7 +7,7 @@ The Aluminum Workshop Management System is a desktop application designed to man
 
 - Imbiki Bricio
 
-## GUI 
+## GUI Dashboard
 ![Dasboard](https://imbikibricio.vercel.app/images/realisations/kintanaServiceAlu.png)
 
 ## Quote Creation
