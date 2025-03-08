@@ -27,7 +27,6 @@ The Aluminum Workshop Management System is a desktop application designed to man
 1. **Clone the repository**
     ```sh
     git clone https://github.com/bricio-imbiki/KintanaServiceAlu.git
-    cd aluminum-workshop-management
     ```
 ## Contact
 For any questions or suggestions, please contact us at [your-email@example.com].
