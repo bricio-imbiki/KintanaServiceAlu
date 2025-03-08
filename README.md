@@ -3,6 +3,15 @@
 ## Overview
 The Aluminum Workshop Management System is a desktop application designed to manage the operations of an aluminum workshop, including orders, inventory, employees, and customer relationships. It also includes a feature to generate quotes (devis) for products like windows, doors, and naco without manual calculations.
 
+## Authors
+
+- Imbiki Bricio
+
+## GUI 
+![Dasboard](https://imbikibricio.vercel.app/images/realisations/kintanaServiceAlu.png)
+
+## Quote Creation
+![Quote Creation](https://imbikibricio.vercel.app/images/realisations/creation-devis.png)
 
 
 ## Features
