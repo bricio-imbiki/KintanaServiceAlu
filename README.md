@@ -29,4 +29,4 @@ The Aluminum Workshop Management System is a desktop application designed to man
     git clone https://github.com/bricio-imbiki/KintanaServiceAlu.git
     ```
 ## Contact
-For any questions or suggestions, please contact us at [your-email@example.com].
+For any questions or suggestions, please contact us at [bricio.imbiki15@gmail.com].
